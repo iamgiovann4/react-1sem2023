@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+.caixa{
+  border: 5px solid;
+  padding: 5px;
+}
+
 .testando{
   border: 5px solid;
 }
