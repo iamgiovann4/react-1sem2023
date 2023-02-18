@@ -1,4 +1,6 @@
-const Header = () => {
+import "./Header.css"; //arquivos css importam sem o from
+
+const Header = () => { //forma atualizada de montar função
     return(
     <>
     <header>
@@ -8,4 +10,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Header; //Para poder ser usado nas de mais rotas

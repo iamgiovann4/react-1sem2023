@@ -1,9 +1,11 @@
-const MainMenu = () => {
+import "./MainMenu.css"; //arquivos css importam sem o from
+
+const MainMenu = () => { //forma atualizada de montar função
     return(
         <>
-        <h4>Giovanna</h4>
+        <p className="MainMenu">Giovanna Siqueira Nicolau.</p>
         </>
     )
 }
 
-export default MainMenu;
+export default MainMenu; //Para poder ser usado nas de mais rotas

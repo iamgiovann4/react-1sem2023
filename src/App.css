@@ -7,13 +7,10 @@
   pointer-events: none;
 }
 
-.caixa{
-  border: 5px solid;
-  padding: 5px;
-}
-
-.testando{
-  border: 5px solid;
+.Nome-react{
+  color: #8f014f;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -23,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #be8c8c;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,7 +31,14 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #490d2e;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.App-link:hover{
+  color: #b82d79;
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
