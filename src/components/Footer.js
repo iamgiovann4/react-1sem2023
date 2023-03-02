@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box'
-import { padding, textAlign } from '@mui/system'
 
 const Footer = () => {
     return(
