@@ -19,7 +19,7 @@ const Sidebar = () => {
 
             <IconCarrinho style={{
                 width: 50,
-                height: 50
+                height: 50,
             }} />
 
             <hr/>
@@ -31,7 +31,8 @@ const Sidebar = () => {
 
             <Bandeira style={{
                 width: 30,
-                height: 30
+                height: 30,
+                fill:'blue'
             }} />
         </Box>
     )
