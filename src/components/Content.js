@@ -1,13 +1,35 @@
 import Box from '@mui/material/Box'
+import Alert from './Alert'
 
 const Content = () => {
-    return(
-       <Box sx={{
-           padding: '50px',
-           fontSize: '20px'
-       }}>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus voluptatem, nostrum obcaecati perferendis fuga harum, ipsam in sed ad veniam fugit iusto possimus rerum reprehenderit. Quae provident cupiditate voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus voluptatem, nostrum obcaecati perferendis fuga harum, ipsam in sed ad veniam fugit iusto possimus rerum reprehenderit. Quae provident cupiditate voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus voluptatem, nostrum obcaecati perferendis fuga harum, ipsam in sed ad veniam fugit iusto possimus rerum reprehenderit. Quae provident cupiditate voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat delectus voluptatem, nostrum obcaecati perferendis fuga harum, ipsam in sed ad veniam fugit iusto possimus rerum reprehenderit. Quae provident cupiditate voluptates.</p>
-       </Box> 
+
+    return (
+        <Box sx={{
+            background: "#EEE",
+            width: '100%',
+            height: 500,
+            padding: '15px'
+        }}>
+            <h1>Content</h1>
+
+                <Alert type="success" >
+                    Deu certo!
+                </Alert>
+
+                <Alert type="error">
+                    Deu Erro!
+                </Alert>
+
+                <Alert type="info">
+                    Info!
+                </Alert>
+
+                <Alert type="warning">
+                   Warning!
+                </Alert>   
+
+        </Box>
     )
 }
+
 export default Content

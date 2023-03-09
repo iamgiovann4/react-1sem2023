@@ -7,10 +7,12 @@ const MainMenu = () => {
             <Box component='nav' sx={styles.nav}>
                 <ul style={styles.ulMenu}>menu...</ul>
                 <Button sx={{
-                backgroundColor: "red", '&:hover': {
-               background: "salmon"
-           }
-            }} variant="contained">Contained</Button>
+                    backgroundColor: "red", '&:hover': {
+                    background: "salmon" 
+                    }
+                }} variant="contained">Contained</Button>
+
+                
             </Box>
         </nav>
     )
