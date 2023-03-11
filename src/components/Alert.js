@@ -1,14 +1,24 @@
-import { borderRadius, padding } from "@mui/system"
+import { FaInfo as Info } from 'react-icons/fa';
+import { IoMdWarning as Warning } from 'react-icons/io';
+import { 
+    MdDisabledByDefault as Error,
+    MdOutlineDoneOutline as Success } from 'react-icons/md';
 
 const typeColor = {
-    success: "#cdefd6",
+    success: "#cdefd6" ,
     error: '#efcdcd',
     info: '#cddeef',
     warning: '#ebe5b7'
 }
 
-const Alert = ({type, children}) => {
+const typeIcon = {
+    success: <Success/>,
+    error: <Error/>,
+    info: <Info/>,
+    warning: <Warning/>
+}
 
+const Alert = ({type, children}) => {
     const bg = {
         background: typeColor[type],
         padding: '20px',
@@ -17,11 +27,10 @@ const Alert = ({type, children}) => {
 
     return (
         <div style={bg}>
+            {typeIcon[type]}
             {children}
         </div>
     )
 }
-
-
 
 export default Alert
