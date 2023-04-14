@@ -1,26 +1,31 @@
 import './Header.css'
 import Box from '@mui/material/Box'
+import { FaReact as IconReact } from 'react-icons/fa';
 
 const Header = () => {
     return (
         <Box component='header'>
-            <h3>Logo</h3>
+            <Box sx={styles.stack}>
+                <IconReact style={styles.logo} />
+                <h3>Logo</h3>
+            </Box>
         </Box>
     )
 }
 
+const styles = {
+    stack: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItens: 'center',
+        gap: '10px',
+        width: 'fit-content'
+    },
+    logo:{
+        color:'#FFF',
+        width: '40px',
+        heigth: '40px'
+    }
+}
+
 export default Header
-
-// import "./Header.css"; //arquivos css importam sem o from
-
-// const Header = () => { //forma atualizada de montar função
-//     return(
-//     <>
-//     <header>
-//         <h1>Hello World!!!</h1>
-//     </header>
-//     </>
-//     )
-// }
-
-// export default Header; //Para poder ser usado nas de mais rotas
