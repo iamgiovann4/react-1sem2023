@@ -13,9 +13,6 @@ const Contact = () => {
         <Sidebar />
         <Box sx={{padding: "15px", textAlign: "center"}}>
             <h1>Contato</h1>
-            <h5>Giovanna</h5>
-            <p>Tel: (12)3883-7489</p>
-            <p>Tel: (12)996708806</p>
         </Box>
       </Box>
       <Footer />
