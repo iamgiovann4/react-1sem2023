@@ -11,7 +11,6 @@ const Sidebar = () => {
         <Box sx={{
             background: "#DDD",
             width: 200,
-            // height: 500,
             padding: '15px'
         }}>
             <h2>Sidebar</h2>
@@ -24,20 +23,20 @@ const Sidebar = () => {
 
             <hr/>
 
-            <img style={{ width: 200, height: 123.33}} src={img} alt='' /> {/* quando eu for usar uma variavel tenho que colocar entre {} */}
+            <img style={{ width: 200, height: 120}} src={img} alt='mountainImg' /> {/* quando eu for usar uma variavel tenho que colocar entre {} */}
 
             <hr/>
 
             <IconCarrinho style={{
-                width: 50,
-                height: 50,
+                width: 30,
+                height: 30,
             }} />
 
             <hr/>
 
             <Cenoura style={{
-                width: 30,
-                height: 30
+                width: 40,
+                height: 40
             }} />
 
             <Bandeira style={{
@@ -53,7 +52,6 @@ const Sidebar = () => {
                 height: 30,
                 fill:'red'
             }}/>
-
         </Box>
     )
 }
