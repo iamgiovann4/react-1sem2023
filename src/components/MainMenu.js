@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 const MainMenu = () => { 
     return (
-        <Box component="nav" style={styles.nav}>
-            <ul style={styles.ulMenu}>
+        <Box component="nav" sx={styles.nav}>
+            <ul sx={styles.ulMenu}>
                 <li><NavLink to='/'>Home</NavLink></li>
                 <li><NavLink to='/quem-somos'>Quem Somos</NavLink></li>
                 <li><NavLink to='/users'>Users</NavLink></li>

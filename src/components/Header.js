@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <Box component='header' sx={{display: 'flex', alignItems: 'center'}}>
             <Box sx={styles.stack}>
-                <IconReact style={styles.logo} />
+                <IconReact sx={styles.logo} />
                 <h3>Logo</h3>
             </Box>
             <MainMenu />
