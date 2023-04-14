@@ -1,52 +1,42 @@
 import Box from '@mui/material/Box'
-import Button from '@mui/material/Button';
+import { NavLink } from 'react-router-dom';
 
 const MainMenu = () => { 
     return (
-        <nav style={styles.nav}>
-            <Box component='nav' sx={styles.nav}>
-                <ul style={styles.ulMenu}>menu...</ul>
-                <Button sx={{
-                    backgroundColor: "red", '&:hover': {
-                    background: "salmon" 
-                    }
-                }} variant="contained">Contained</Button>
-
-                
-            </Box>
-        </nav>
+        <Box component="nav" style={styles.nav}>
+            <ul style={styles.ulMenu}>
+                <li><NavLink to='/'>Home</NavLink></li>
+                <li><NavLink to='/quem-somos'>Quem Somos</NavLink></li>
+                <li><NavLink to='/users'>Users</NavLink></li>
+                <li><NavLink to='/contato'>Contato</NavLink></li>
+            </ul>
+        </Box>
     )
 }
 
 const styles = {
     nav: {
-        background: '#555',
-        color: '#000',
-        padding: '20px'
+        color: '#FFF',
+        margin: '0 0 0 auto',
+        '& ul li a': {
+            color: '#FFF',
+            textDecoration: 'none',
+            padding: '0 5px 8px 5px',
+            '&:hover': {
+                color: '#DDD',
+                borderBottom: '3px solid #f0c14b'
+            }
+        }
     },
     ulMenu: {
-        listStyleType: 'none'
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center', 
+        gap: '10px',
+        listStyleType: 'none',
+        padding: '0',
+        margin: '0'
     }
 }
 
-
 export default MainMenu
-
-// import "./MainMenu.css"; //arquivos css importam sem o from
-// import Button from '@mui/material/Button';
-// import Box from '@mui/material/Box';
-
-// const MainMenu = () => { //forma atualizada de montar função
-//     return(
-//         <Box component="nav">
-//             <p className="MainMenu">Giovanna Siqueira Nicolau.</p>
-//             <Button sx={{
-//                 backgroundColor: "red", '&:hover': {
-//                 background: "salmon"
-//             }
-//             }} variant="contained">Contained</Button>
-//         </Box>
-//     )
-// }
-
-// export default MainMenu; //Para poder ser usado nas de mais rotas
