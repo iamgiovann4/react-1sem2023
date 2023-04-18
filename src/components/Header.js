@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <Box component='header' sx={{display: 'flex', alignItems: 'center'}}>
             <Box sx={styles.stack}>
-                <IconReact sx={styles.logo} />
+                <IconReact style={styles.logo} />
                 <h3>Logo</h3>
             </Box>
             <MainMenu />
@@ -25,8 +25,8 @@ const styles = {
     },
     logo:{
         color:'#FFF',
-        width: '40px',
-        heigth: '40px'
+        width: '7em',
+        height: '3em'
     }
 }
 

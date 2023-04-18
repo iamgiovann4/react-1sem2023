@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 const Footer = () => {
     return(
         <Box component="footer" sx={styles.footer}>
-           <p>Giovanna Siqueira Nicolau</p>
+           <p style={styles.paragrafo}>Giovanna Siqueira Nicolau</p>
        </Box>
     )
 }
@@ -13,7 +13,11 @@ const styles = {
         background: '#555',
         color: '#000',
         padding: '20px',
-        marginTop: '5px'
+        display: 'flex',
+        justifyContent: 'center'
+    },
+    paragrafo: {
+        color: '#fff'
     }
 }
 export default Footer

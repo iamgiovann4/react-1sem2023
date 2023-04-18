@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
+import Content from '../components/Content'
 import Footer from '../components/Footer'
 
 const Contact = () => {
@@ -9,9 +10,9 @@ const Contact = () => {
       <Header />
       <Box sx={{display: 'flex'}}>
         <Sidebar />
-        <Box sx={{padding: "15px", textAlign: "center"}}>
+        <Content sx={{padding: "15px", textAlign: "center"}}>
             <h1>Contato</h1>
-        </Box>
+        </Content>
       </Box>
       <Footer />
     </>
