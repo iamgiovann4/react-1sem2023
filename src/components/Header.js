@@ -114,8 +114,8 @@ const Header = () => {
                   }}>
                     <h1>Logar</h1>
                     <form onSubmit={handleSubmit}>
-                      <input type="text" name="email" placeholder="Email" /><br />
-                      <input type="password" name="pass" placeholder="Senha" /><br />
+                      <input type="text" name="office" placeholder="Profissão" /><br />
+                      <input type="password" name="age" placeholder="Idade" /><br />
                       <br />
                       <button type="submit">Logar</button>
                     </form>

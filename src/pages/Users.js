@@ -93,7 +93,7 @@ const Users = () => {
             <h1>Cadastrar User</h1>
             <form onSubmit={handleSubmit}>
               <input type="text" name="nome" placeholder="Nome" /><br />
-              <input type="number" name="age" placeholder="Idade" /><br />
+              <input type="password" name="age" placeholder="Idade" /><br />
               <input type="text" name="office" placeholder="Profissão" /><br />
               <br />
               <button type="submit">Cadastrar</button>
@@ -101,7 +101,6 @@ const Users = () => {
           </Box>
         </Box>
       }
-
       <Footer />
     </>
   )

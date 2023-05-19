@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Box from "@mui/material/Box";
 import { FaTrash as IconTrash, FaEdit as IconEdit } from 'react-icons/fa'
-import useAuthStore from '../store/useAuthStore'
+import useAuthStore from '../store/authStore'
 
 const CardUser = ({user, setUsers, users}) => {
 
@@ -60,7 +60,7 @@ const CardUser = ({user, setUsers, users}) => {
           "Content-Type": "application/json",
           "Authorization": token
         }
-      })
+      }) 
       const data = await response.json()
       console.log(data)
       const newUsers = users.filter((user) => user.id !== id)
