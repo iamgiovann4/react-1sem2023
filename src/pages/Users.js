@@ -29,12 +29,10 @@ const Users = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     console.log('Minha funcao de submit')
-    console.log(event.target)
     const nome = event.target.nome.value
     const age = event.target.age.value
     const office = event.target.office.value
     const user = {nome, age, office}
-    console.log(user)
     try {
       const response = await fetch('http://localhost:3100/user', 
       {
@@ -64,7 +62,7 @@ const Users = () => {
           <button onClick={() => setModalOpen(true)} >Cadastrar User</button>
             {users && 
               users.map(user => (
-                <CardUser key={user.id} user={user} />
+                <CardUser key={user.id} user={user} setUsers={setUsers} users={users}/>
               ))
             }
         </Content>
