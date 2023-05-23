@@ -65,6 +65,7 @@ const Users = () => {
                 <CardUser key={user.id} user={user} setUsers={setUsers} users={users}/>
               ))
             }
+            
         </Content>
       </Box>
       {modalOpen &&
