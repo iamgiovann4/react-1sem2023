@@ -32,16 +32,16 @@ const Users = () => {
     const nome = event.target.nome.value
     const office = event.target.office.value
     const age = event.target.age.value
-    const user = {nome, office, age}
+    const user = { nome, office, age }
     try {
-      const response = await fetch('http://localhost:3100/user', 
-      {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-      })
+      const response = await fetch('http://localhost:3100/user',
+        {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(user)
+        })
       const data = await response.json()
       console.log(data)
       setModalOpen(false) //fechar o modal assim que for cadastrado um user
@@ -60,16 +60,16 @@ const Users = () => {
         <Sidebar />
         <Content title="Users">
           <button onClick={() => setModalOpen(true)} >Cadastrar User</button>
-            {users && 
-              users.map(user => (
-                <CardUser key={user.id} user={user} setUsers={setUsers} users={users} />
-              ))
-            }
+          {users &&
+            users.map(user => (
+              <CardUser key={user.id} user={user} setUsers={setUsers} users={users} />
+            ))
+          }
         </Content>
       </Box>
       {modalOpen &&
         <Box className="bgModal" onClick={(event) => {
-          if(event.target.className.includes('bgModal')){
+          if (event.target.className.includes('bgModal')) {
             setModalOpen(false)
           }
         }} sx={{
