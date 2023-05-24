@@ -75,13 +75,11 @@ const CardUser = ({user, setUsers, users}) => {
             {/* <img src={user.avatar} alt={user.name} style={{witdh: '80px', height: '80px', borderRadius: '50%'}}/> */}
             <Box>
                 <h3>{user.nome}</h3>
-                {console.log(user.nome)}
 
                 {/* <p>{user.age}</p>
                 {console.log(user.age)} */}
                 
                 <p>{user.office}</p>
-                {console.log(user.office)}
             </Box>
             {isLogged && (roles.includes('admin') || officeLogged === user.office) && 
             (<IconTrash style={{width: '15px', height: '15px', position: 'absolute', top: '20px', right: '20px', padding: '10px', cursor: 'pointer' }} onClick={() => deleteUser(user.id)}/>)}

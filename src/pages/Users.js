@@ -30,9 +30,9 @@ const Users = () => {
     event.preventDefault()
     console.log('Minha funcao de submit')
     const nome = event.target.nome.value
-    const age = event.target.age.value
     const office = event.target.office.value
-    const user = {nome, age, office}
+    const age = event.target.age.value
+    const user = {nome, office, age}
     try {
       const response = await fetch('http://localhost:3100/user', 
       {
@@ -62,10 +62,9 @@ const Users = () => {
           <button onClick={() => setModalOpen(true)} >Cadastrar User</button>
             {users && 
               users.map(user => (
-                <CardUser key={user.id} user={user} setUsers={setUsers} users={users}/>
+                <CardUser key={user.id} user={user} setUsers={setUsers} users={users} />
               ))
             }
-            
         </Content>
       </Box>
       {modalOpen &&
@@ -82,7 +81,8 @@ const Users = () => {
           background: '#000000A0',
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'center'
+          alignItems: 'center',
+          zIndex: 9
         }}>
           <Box sx={{
             width: '500px',
@@ -94,8 +94,8 @@ const Users = () => {
             <h1>Cadastrar User</h1>
             <form onSubmit={handleSubmit}>
               <input type="text" name="nome" placeholder="Nome" /><br />
-              <input type="password" name="age" placeholder="Idade" /><br />
               <input type="text" name="office" placeholder="Profissão" /><br />
+              <input type="password" name="age" placeholder="Idade" /><br />
               <br />
               <button type="submit">Cadastrar</button>
             </form>

@@ -2,9 +2,9 @@ import Box from '@mui/material/Box'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Content from '../components/Content'
+import Footer from '../components/Footer'
 import Alert from '../components/Alert'
 import SampleUseState from '../components/SampleUseState'
-import Footer from '../components/Footer'
 
 const Home = () => {
   return (

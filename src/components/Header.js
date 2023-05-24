@@ -17,9 +17,9 @@ const Header = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault() 
-        const nome = event.target.nome.value
+        const office = event.target.office.value
         const age = event.target.age.value
-        const user = {nome, age}
+        const user = {office, age}
         try {
           const response = await fetch('http://localhost:3100/auth/login',
           {
@@ -55,7 +55,7 @@ const Header = () => {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({nome: nomeUserLogged, token: tokenUserLogged}), 
+            body: JSON.stringify({office: officeUserLogged, token: tokenUserLogged}), 
           })
           const data = await response.json()
           console.log(data)
@@ -83,7 +83,7 @@ const Header = () => {
             <div style={{margin: '0 0 0 20px', color: '#FFF' }}>
                 {isLogged ? (
                     <>
-                        <p style={styles.nome}>{nomeUserLogged}</p>
+                        <p onClick={() => handleLogout()} style={styles.nome}>{nomeUserLogged}</p>
                         {/* <img onClick={() => handleLogout()} style={styles.avatar} src={avatarUserLogged} alt={nomeUserLogged} /> */}
                     </>
                 ) : (<button onClick={() => setModalOpen(true)}>Logar</button>) }
@@ -140,8 +140,8 @@ const styles = {
         height: '3em'
     },
     nome: {
-        fontSize: '40px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        color: 'yellow'
     }
 }
 
