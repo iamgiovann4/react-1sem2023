@@ -19,8 +19,8 @@ const CardUser = ({ user, setUsers, users }) => {
     const id = parseInt(event.target.id.value)
     const nome = event.target.nome.value
     const office = event.target.office.value
-    const age = event.target.age.value
-    const userEdited = { id, nome, office, age }
+    // const age = event.target.age.value
+    const userEdited = { id, nome, office }
     try {
       const response = await fetch('http://localhost:3100/user',
         {
